@@ -14,6 +14,10 @@ public class DataInFile {
         try{
             ClassLoader classLoader = getClass().getClassLoader();
             InputStream resource = classLoader.getResourceAsStream("airports.dat");
+/*            File file = new File(classLoader.getResource("airports.dat").getPath());
+            FileReader fr = new FileReader(file);
+            BufferedReader reader = new BufferedReader(fr);
+            System.out.println(file);-вот здесь ошибка*/
             int code;
             String char_str="";
             while ((code= resource.read())!=-1) {
